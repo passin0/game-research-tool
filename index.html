@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>銀狼星亂做工具</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="filters">
+        <div class="filter-group" id="filter1">
+            <span>設計公司：</span>
+            <button type="button" data-category="category1" data-value="A">未央公司與其他</button>
+            <button type="button" data-category="category1" data-value="B">木星工業</button>
+            <button type="button" data-category="category1" data-value="C">諾瑪運輸</button>
+            <button type="button" data-category="category1" data-value="D">安東尼奧斯</button>
+        </div>
+        <div class="filter-group" id="filter2">
+            <span>戰略性能：</span>
+            <button type="button" data-category="category2" data-value="A">火力出眾</button>
+            <button type="button" data-category="category2" data-value="B">持續作戰</button>
+            <button type="button" data-category="category2" data-value="C">戰略與支援</button>
+            <button type="button" data-category="category2" data-value="D">戰機與護航艇</button>
+        </div>
+        <div class="filter-group" id="filter3">
+            <span>戰術性能：</span>
+            <button type="button" data-category="category3" data-value="A">投射武器</button>
+            <button type="button" data-category="category3" data-value="B">直射武器</button>
+        </div>
+    </div>
+
+    <div id="grid" class="grid"></div>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
