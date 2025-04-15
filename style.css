@@ -31,6 +31,13 @@
     object-fit: cover;
     border-bottom: 1px solid #eee;
 }
+.item-detail {
+    margin-top: 5px;
+    padding: 6px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ccc;
+    font-size: 0.85rem;
+}
 
 .placeholder {
     width: 100%;
