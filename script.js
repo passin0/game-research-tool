@@ -4,6 +4,32 @@ function loadData() {
     window.itemsData = window.itemsData || [];
     renderGrid();
 }
+const labelTranslations = {
+    category1: {
+        A: "未央公司",
+        B: "木星工業",
+        C: "諾瑪運輸",
+        D: "安東尼奧斯"
+    },
+    category2: {
+        A: "火力出眾",
+        B: "持續作戰",
+        C: "戰略與支援",
+        D: "戰機與護航艇"
+    },
+    category3: {
+        A: "投射武器",
+        B: "直射武器"
+    }
+};
+function labelTitle(key) {
+    switch (key) {
+        case 'category1': return '設計公司';
+        case 'category2': return '戰略性能';
+        case 'category3': return '戰術性能';
+        default: return key;
+    }
+}
 
 function renderGrid() {
     const grid = document.getElementById('grid');
@@ -33,26 +59,51 @@ function renderGrid() {
     filteredItems.forEach(item => {
         const div = document.createElement('div');
         div.className = 'item' + (item.match ? '' : ' dimmed');
-
+    
         let content = '';
-
+    
         if (item.image) {
             content += `<img src="${item.image}" alt="${item.name}">`;
         } else {
             content += `<div class="placeholder"></div>`;
         }
-
+    
         content += `<div class="name">${item.name}</div>`;
-
+    
         if (item.match && totalWeight > 0) {
             const probability = ((item.weight / totalWeight) * 100).toFixed(2);
             content += `<div class="probability">機率: ${probability}%</div>`;
         }
-
+    
         div.innerHTML = content;
+    
+        // ✅ 加上點擊顯示標籤資訊
+        div.addEventListener('click', () => {
+            const existing = div.querySelector('.item-detail');
+            if (existing) {
+                existing.remove(); // 如果已經展開，點一下就收起來
+                return;
+            }
+    
+            const detail = document.createElement('div');
+            detail.className = 'item-detail';
+    
+            let info = '';
+            ['category1', 'category2', 'category3'].forEach(cat => {
+                if (item[cat]) {
+                    const tags = Array.isArray(item[cat]) ? item[cat] : [item[cat]];
+                    const translated = tags.map(tag => labelTranslations[cat]?.[tag] || tag);
+                    info += `<div><strong>${labelTitle(cat)}：</strong>${translated.join('、')}</div>`;
+                }
+            });
+    
+            detail.innerHTML = info;
+            div.appendChild(detail);
+        });
+    
         grid.appendChild(div);
     });
-}
+}    
 
 document.querySelectorAll('button[data-category]').forEach(button => {
     button.addEventListener('click', function () {
