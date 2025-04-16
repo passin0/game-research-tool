@@ -24,7 +24,7 @@ window.itemsData = [
       "name": "永恆蒼芎",
       "category1": ["B"],
       "category2": ["A","C"],
-      "image": "images/object2.png",
+      "image": "",
       "weight": 10
     },
     {
@@ -314,7 +314,32 @@ window.itemsData = [
       "category2": ["C"],
       "image": "",
       "weight": 236
-    }
+    },//驅逐艦
+    { name: "AC721A", category1: ["A"], category2: ["C"], category3: ["B"], weight: 195 },
+    { name: "AC721B", category1: ["A"], category2: ["C"], category3: ["A"], weight: 195 },
+    { name: "AC721D", category1: ["A"], category2: ["C"], weight: 195 },
+    { name: "亞達伯拉A", category1: ["C"], category2: ["A","C"], category3: ["B"], weight: 195 },
+    { name: "亞達伯拉B", category1: ["C"], category2: ["A","C"], category3: ["B"], weight: 195 },
+    { name: "穀神星A", category1: ["B"], category2: ["C"], weight: 195 },
+    { name: "穀神星B", category1: ["B"], category2: ["C"], weight: 195 },
+    { name: "穀神星C", category1: ["B"], category2: ["C"], weight: 195 },
+    { name: "鬩神星A", category1: ["B"], category2: ["C"], category3: ["B"], weight: 195 },
+    { name: "鬩神星B", category1: ["B"], category2: ["A","B"], category3: ["B"], weight: 195 },
+    { name: "鬩神星C", category1: ["B"], category2: ["B"], category3: ["B"], weight: 195 },     
+    { name: "衛士A", category1: ["D"], category3: ["A"], weight: 195 },
+    { name: "衛士B", category1: ["D"], category2: ["C"], category3: ["A"], weight: 195 },
+    { name: "衛士C", category1: ["D"], category2: ["A","B"], category3: ["B"], weight: 195 },
+    { name: "創神星A", category1: ["B"], category2: ["A"], category3: ["B"], weight: 195 },
+    { name: "創神星B", category1: ["B"], category2: ["A"], category3: ["B"], weight: 195 },
+    { name: "鬥牛A", category1: ["C"], category2: ["A","B"], category3: ["B"], weight: 195 },
+    { name: "鬥牛B", category1: ["C"], category2: ["A","B"], category3: ["B"], weight: 195 },
+    { name: "鬥牛C", category1: ["C"], category2: ["B","C"], category3: ["B"], weight: 195 },
+    { name: "苔原A", category1: ["C"], category2: ["C"], weight: 195 },
+    { name: "苔原B", category1: ["C"], category2: ["C"], weight: 195 },
+    { name: "槍騎兵A", category1: ["D"], category2: ["A"], category3: ["A"], weight: 195 },
+    { name: "槍騎兵B", category1: ["D"], category2: ["A"], category3: ["A"], weight: 195 },
+    { name: "槍騎兵C", category1: ["D"], category2: ["B","C"], category3: ["A"], weight: 195 },
+    { name: "銀狼星", weight: 0 },
     
   ];
   
